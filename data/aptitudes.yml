@@ -1,0 +1,21 @@
+---
+- type: aptitude
+  id: general
+- type: aptitude
+  id: offence
+- type: aptitude
+  id: finesse
+- type: aptitude
+  id: defence
+- type: aptitude
+  id: psyker
+- type: aptitude
+  id: tech
+- type: aptitude
+  id: knowledge
+- type: aptitude
+  id: leadership
+- type: aptitude
+  id: fieldcraft
+- type: aptitude
+  id: social

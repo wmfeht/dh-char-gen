@@ -1,0 +1,339 @@
+---
+- id: adeptus administratum
+  type: background
+  bonuses:
+  - and:
+    - or:
+      - type: skill
+        id: commerce
+      - type: skill
+        id: medicae
+    - or:
+      - type: skill
+        id: common lore
+        specialty: adeptus administratum
+      - type: skill
+        id: linguistics
+        specialty: high gothic
+      - type: skill
+        id: logic
+      - type: skill
+        id: scholastic lore
+        specialty: "&select"
+    - or:
+      - type: talent
+        id: weapon training
+        specialty: las
+      - type: talent
+        id: weapon training
+        specialty: solid projectile
+    - or:
+      - type: equipment
+        id: laspistol
+      - type: equipment
+        id: stub automatic
+    - type: equipment
+      id: imperial robes
+    - type: equipment
+      id: autoquill
+    - type: equipment
+      id: chrono
+    - type: equipment
+      id: dataslate
+    - type: equipment
+      id: medi-kit
+    - or:
+      - type: aptitude
+        id: knowledge
+      - type: aptitude
+        id: social
+
+- id: adeptus arbites
+  type: background
+  bonuses:
+  - and:
+    - type: skill
+      id: awareness
+    - or:
+      - type: skill
+        id: common lore
+        specialty: adeptus arbites
+      - type: skill
+        id: common lore
+        specialty: underworld
+    - or:
+      - type: skill
+        id: inquiry
+      - type: skill
+        id: interrogation
+    - type: skill
+      id: intimidate
+    - type: skill
+      id: scrutiny
+    - or:
+      - type: talent
+        id: weapon training
+        specialty: shock
+      - type: talent
+        id: weapon training
+        specialty: solid projectile
+    - or:
+      - type: equipment
+        id: shotgun
+      - type: equipment
+        id: shock maul
+    - or:
+      - type: equipment
+        id: enforcer light carapace armor
+      - type: equipment
+        id: carapace chestpiece
+    - type: equipment
+      id: stimm
+      quantity: 3
+    - type: equipment
+      id: manacles
+    - type: equipment
+      id: lho stick
+      quantity: 12
+
+- id: adeptus astra telepathica
+  type: background
+  bonuses:
+  - and:
+    - type: skill
+      id: awareness
+    - type: skill
+      id: common lore
+      specialty: adeptus astra telepathica
+    - or:
+      - type: skill
+        id: deceive
+      - type: skill
+        id: interrogation
+    - type: skill
+      id: forbidden lore
+      specialty: the warp
+    - or:
+      - type: skill
+        id: psyniscience
+      - type: skill
+        id: scrutiny
+    - type: talent
+      id: weapon training
+      specialty: las
+    - type: talent
+      id: weapon training
+      specialty: low-tech
+    - type: equipment
+      id: laspistol
+    - or:
+      - type: equipment
+        id: staff
+      - type: equipment
+        id: whip
+    - or:
+      - type: equipment
+        id: light flak cloak
+      - type: equipment
+        id: flak vest
+    - or:
+      - type: equipment
+        id: microbead
+      - type: equipment
+        id: psy focus
+    - or:
+      - type: aptitude
+        id: defense
+      - type: aptitude
+        id: psyker
+
+- id: adeptus mechanicus
+  type: background
+  bonuses:
+  - and:
+    - or:
+      - type: skill
+        id: awareness
+      - type: skill
+        id: operate
+    - type: skill
+      id: common lore
+      specialty: adeptus mechanicus
+    - type: skill
+      id: logic
+    - type: skill
+      id: scrutiny
+    - type: skill
+      id: tech use
+    - type: talent
+      id: mechadendrite use
+      specialty: utility
+    - type: talent
+      id: weapon training
+      specialty: solid projectile
+    - type: trait
+      id: mechanicus implants
+    - or:
+      - type: equipment
+        id: autogun
+      - type: equipment
+        id: hand cannon
+    - or:
+      - type: equipment
+        id: monotask servo-skull
+        specialty: utility
+      - type: equipment
+        id: optical mechadendrite
+    - type: equipment
+      id: imperial robes
+    - type: equipment
+      id: sacred unguents
+      quantity: 2
+    - or:
+      - type: aptitude
+        id: knowledge
+      - type: aptitude
+        id: tech
+
+- id: adeptus ministorum
+  type: background
+  bonuses:
+  - and:
+    - type: skill
+      id: charm
+    - type: skill
+      id: command
+    - type: skill
+      id: common lore
+      specialty: adeptus ministorum
+    - or:
+      - type: skill
+        id: inquiry
+      - type: skill
+        id: scrutiny
+    - type: skill
+      id: linguistics
+      specialty: high gothic
+    - or:
+      - type: talent
+        id: weapon training
+        specialty: flame
+      - and:
+        - type: talent
+          id: weapon training
+          specialty: low-tech
+        - type: talent
+          id: weapon training
+          specialty: solid projectile
+    - or:
+      - type: equipment
+        id: hand flamer
+      - and:
+        - type: equipment
+          id: warhammer
+        - type: equipment
+          id: stub revolver
+    - or:
+      - type: equipment
+        id: imperial robes
+      - type: equipment
+        id: flak vest
+    - type: equipment
+      id: backpack
+    - type: equipment
+      id: glow-globe
+    - type: equipment
+      id: laud hailer servo-skull
+    - or:
+      - type: aptitude
+        id: leadership
+      - type: aptitude
+        id: social
+
+- id: imperial guard
+  type: background
+  bonuses:
+  - and:
+    - type: skill
+      id: athletics
+    - type: skill
+      id: command
+    - type: skill
+      id: common lore
+      specialty: imperial guard
+    - or:
+      - type: skill
+        id: medicae
+      - type: skill
+        id: operate
+        specialty: surface
+    - type: skill
+      id: navigate
+      specialty: surface
+    - type: talent
+      id: weapon training
+      specialty: las
+    - type: talent
+      id: weapon training
+      specialty: low-tech
+    - type: aptitude
+      id: fieldcraft
+    - type: aptitude
+      id: leadership
+
+- id: outcast
+  type: background
+  bonuses:
+  - and:
+    - or:
+      - type: skill
+        id: acrobatics
+      - type: skill
+        id: sleight of hand
+    - type: skill
+      id: common lore
+      specialty: underworld
+    - type: skill
+      id: deceive
+    - type: skill
+      id: dodge
+    - type: skill
+      id: stealth
+    - type: talent
+      id: weapon training
+      specialty: chain
+    - or:
+      - type: talent
+        id: weapon training
+        specialty: las
+      - type: talent
+        id: weapon training
+        specialty: solid projectile
+    - and:
+      - or:
+        - type: equipment
+          id: autopistol
+        - type: equipment
+          id: laspistol
+      - or:
+        - type: equipment
+          id: armored bodyglove
+        - type: equipment
+          id: flak vest
+      - or:
+        - type: equipment
+          id: obscura
+          quantity: 2
+        - type: equipment
+          id: slaught
+          quantity: 2
+    - or:
+      - type: aptitude
+        id: social
+      - type: aptitude
+        id: fieldcraft
+
+        
+        
+        
+      

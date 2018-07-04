@@ -1,0 +1,168 @@
+---
+- id: assasin
+  type: role
+  bonuses:
+  - and:
+    - type: aptitude
+      id: agility
+    - or:
+      - type: aptitude
+        id: ballistic skill
+      - type: aptitude
+        id: weapon skill
+    - type: aptitude
+      id: fieldcraft
+    - type: aptitude
+      id: finesse
+    - type: aptitude
+      id: perception
+    - or:
+      - type: talent
+        id: jaded
+      - type: talent
+        id: leap up
+
+- id: chirurgeon
+  type: role
+  bonuses:
+  - and:
+    - type: aptitude
+      id: fieldcraft
+    - type: aptitude
+      id: intelligence
+    - type: aptitude
+      id: knowledge
+    - type: aptitude
+      id: strength
+    - type: aptitude
+      id: toughness
+    - or:
+      - type: talent
+        id: resistance
+        specialty: "&select"
+      - type: talent
+        id: takedown
+
+- id: desperado
+  type: role
+  bonuses:
+  - and:
+    - type: aptitude
+      id: agility
+    - type: aptitude
+      id: ballistic skill
+    - type: aptitude
+      id: defence
+    - type: aptitude
+      id: fellowship
+    - type: aptitude
+      id: finesse
+    - or:
+      - type: talent
+        id: catfall
+      - type: talent
+        id: quick draw
+
+- id: hierophant
+  type: role
+  bonuses:
+  - and:
+    - type: aptitude
+      id: fellowship
+    - type: aptitude
+      id: offence
+    - type: aptitude
+      id: social
+    - type: aptitude
+      id: toughness
+    - type: aptitude
+      id: willpower
+    - or:
+      - type: talent
+        id: double team
+      - type: talent
+        id: hatred
+        specialty: "&select"
+
+- id: mystic
+  type: role
+  bonuses:
+  - and:
+    - type: aptitude
+      id: defence
+    - type: aptitude
+      id: intelligence
+    - type: aptitude
+      id: knowledge
+    - type: aptitude
+      id: perception
+    - type: aptitude
+      id: willpower
+    - or:
+      - type: talent
+        id: Resistance
+        specialty: psychic powers
+      - type: talent
+        id: warp sense
+
+- id: sage
+  type: role
+  bonuses:
+  - and:
+    - type: aptitude
+      id: intelligence
+    - type: aptitude
+      id: knowledge
+    - type: aptitude
+      id: perception
+    - type: aptitude
+      id: tech
+    - type: aptitude
+      id: willpower
+    - or:
+      - type: talent
+        id: ambidextrous
+      - type: talent
+        id: clues from crowds
+
+- id: seeker
+  type: role
+  bonuses:
+  - and:
+    - type: aptitude
+      id: fellowship
+    - type: aptitude
+      id: intelligence
+    - type: aptitude
+      id: perception
+    - type: aptitude
+      id: social
+    - type: aptitude
+      id: tech
+    - or:
+      - type: talent
+        id: keen intuition
+      - type: talent
+        id: disarm
+
+- id: warrior
+  type: role
+  bonuses:
+  - and:
+    - type: aptitude
+      id: ballistic skill
+    - type: aptitude
+      id: defence
+    - type: aptitude
+      id: offence
+    - type: aptitude
+      id: strength
+    - type: aptitude
+      id: weapon skill
+    - or:
+      - type: talent
+        id: iron jaw
+      - type: talent
+        id: rapid reload
+
+

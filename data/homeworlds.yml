@@ -1,0 +1,132 @@
+---
+- id: feral world
+  type: homeworld
+  bonuses:
+  - and:
+    - type: characteristic
+      id: strength
+      mod: 5
+    - type: characteristic
+      id: toughness
+      mod: 5
+    - type: characteristic
+      id: influence
+      mod: -5
+    - type: aptitude
+      id: toughness
+    - type: wounds
+      base: 9+1d5
+    - type: fate
+      base: 2
+      blessing: 3
+
+- id: forge world
+  type: homeworld
+  bonuses:
+  - and:
+    - type: characteristic
+      id: intelligence
+      mod: 5
+    - type: characteristic
+      id: toughness
+      mod: 5
+    - type: characteristic
+      id: fellowship
+      mod: -5
+    - type: fate
+      base: 3
+      blessing: 8
+    - or:
+      - type: talent
+        id: Technical Knock
+      - type: talent
+        id: Weapon-Tech
+    - type: aptitude
+      id: intelligence
+    - type: wounds
+      base: 8+1d5
+
+- id: highborn
+  type: homeworld
+  bonuses:
+  - and:
+    - type: characteristic
+      id: fellowship
+      mod: 5
+    - type: characteristic
+      id: influence
+      mod: 5
+    - type: characteristic 
+      id: toughness
+      mod: -5
+    - type: fate
+      base: 4
+      blessing: 10
+    - type: aptitude
+      id: fellowship
+    - type: wounds
+      base: 9+1d5
+
+- id: hive world
+  type: homeworld
+  bonuses:
+  - and:
+    - type: characteristic
+      id: agility
+      mod: 5
+    - type: characteristic
+      id: perception
+      mod: 5
+    - type: characteristic 
+      id: willpower
+      mod: -5
+    - type: fate
+      base: 2
+      blessing: 6
+    - type: aptitude
+      id: perception
+    - type: wounds
+      base: 8+1d5
+
+- id: shrine world
+  type: homeworld
+  bonuses:
+  - and:
+    - type: characteristic
+      id: fellowship
+      mod: 5
+    - type: characteristic
+      id: willpower
+      mod: 5
+    - type: characteristic 
+      id: perception
+      mod: -5
+    - type: fate
+      base: 3
+      blessing: 6
+    - type: aptitude
+      id: willpower
+    - type: wounds
+      base: 7+1d5
+
+- id: voidborn
+  bonuses:
+  - and:
+    - type: characteristic
+      id: intelligence
+      mod: 5
+    - type: characteristic
+      id: willpower
+      mod: 5
+    - type: characteristic 
+      id: strength
+      mod: -5
+    - type: fate
+      base: 3
+      blessing: 5
+    - type: talent
+      id: strong minded
+    - type: aptitude
+      id: intelligence
+    - type: wounds
+      base: 7+1d5
