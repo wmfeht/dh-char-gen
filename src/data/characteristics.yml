@@ -1,0 +1,31 @@
+---
+- id: weapon skill
+  type: characteristic
+  base: 1d20+20
+- id: ballistic skill
+  type: characteristic
+  base: 1d20+20
+- id: strength
+  type: characteristic
+  base: 1d20+20
+- id: toughness
+  type: characteristic
+  base: 1d20+20
+- id: agility
+  type: characteristic
+  base: 1d20+20
+- id: intelligence
+  type: characteristic
+  base: 1d20+20
+- id: perception
+  type: characteristic
+  base: 1d20+20
+- id: willpower
+  type: characteristic
+  base: 1d20+20
+- id: fellowship
+  type: characteristic
+  base: 1d20+20
+- id: influence
+  type: characteristic
+  base: 1d20+20
