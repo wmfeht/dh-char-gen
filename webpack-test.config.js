@@ -1,11 +1,16 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-const htmlPlugin = new HtmlWebpackPlugin({
-    template: './src/index.html',
-    filename: './index.html'
-});
+const nodeExternals = require('webpack-node-externals');
+const ShellPlugin = require('webpack-shell-plugin');
 
 module.exports = {
+    node: {
+        fs: 'empty'
+    },
+    entry: './test/index.js',
+    output: {
+        filename: 'testBundle.js'
+    },
+    target: 'node',
+    externals: [nodeExternals()],
     module: {
         rules: [
             {
@@ -28,9 +33,11 @@ module.exports = {
             }
         ]
     },
-    devtool: 'inline-source-map',
+    devtool: 'source-map',
     devServer: {
         contentBase: './dist'
     },
-    plugins: [htmlPlugin]
+    plugins: [new ShellPlugin({
+        onBuildExit: 'mocha --require source-map-support/register dist/testBundle.js'
+    })]
 };

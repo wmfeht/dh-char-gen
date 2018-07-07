@@ -8,18 +8,17 @@
         id: commerce
       - type: skill
         id: medicae
-    - or:
-      - type: skill
-        id: common lore
-        specialty: adeptus administratum
-      - type: skill
-        id: linguistics
-        specialty: high gothic
-      - type: skill
-        id: logic
-      - type: skill
-        id: scholastic lore
-        specialty: "&select"
+    - type: skill
+      id: common lore
+      specialty: adeptus administratum
+    - type: skill
+      id: linguistics
+      specialty: high gothic
+    - type: skill
+      id: logic
+    - type: skill
+      id: scholastic lore
+      specialty: "&select"
     - or:
       - type: talent
         id: weapon training
@@ -309,31 +308,30 @@
       - type: talent
         id: weapon training
         specialty: solid projectile
-    - and:
-      - or:
-        - type: equipment
-          id: autopistol
-        - type: equipment
-          id: laspistol
-      - or:
-        - type: equipment
-          id: armored bodyglove
-        - type: equipment
-          id: flak vest
-      - or:
-        - type: equipment
-          id: obscura
-          quantity: 2
-        - type: equipment
-          id: slaught
-          quantity: 2
+    - or:
+      - type: equipment
+        id: autopistol
+      - type: equipment
+        id: laspistol
+    - or:
+      - type: equipment
+        id: armored bodyglove
+      - type: equipment
+        id: flak vest
+    - or:
+      - type: equipment
+        id: obscura
+        quantity: 2
+      - type: equipment
+        id: slaught
+        quantity: 2
     - or:
       - type: aptitude
         id: social
       - type: aptitude
         id: fieldcraft
 
-        
-        
-        
-      
+
+
+
+

@@ -1,0 +1,12 @@
+.ui.form.stats_panel .inline.field label {
+    width: 60%;
+    text-align: right;
+}
+
+.ui.form.stats_panel .inline.field .ui.input {
+    width: 30%;
+}
+
+.ui.form.stats_panel .inline.field {
+    width: 100%;
+}
