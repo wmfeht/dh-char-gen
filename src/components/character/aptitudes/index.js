@@ -6,14 +6,17 @@ import { Header, Segment } from 'semantic-ui-react';
 import './aptitudes.css';
 
 class Aptitudes extends Component {
+    renderAptitudes() {
+        return this.props.aptitudes.map(a => (<p key={a}>{_.startCase(a)}</p>));
+    }
+
     render() {
+        const aptitudesNodes = this.renderAptitudes();
         return (
             <div className='aptitudes_panel'>
                 <Header as="h4" attached='top'>Aptitudes</Header>
                 <Segment>
-                    <p>foo</p>
-                    <p>bar</p>
-                    <p>baz</p>
+                    {aptitudesNodes}
                 </Segment>
             </div>
         );
@@ -21,10 +24,13 @@ class Aptitudes extends Component {
 }
 
 Aptitudes.propTypes = {
+    aptitudes: PropTypes.array
 };
 
 function mapStateToProps(state) {
-    return state.character;
+    return {
+        aptitudes: state.character.aptitudes
+    };
 }
 
 function mapDispatchToProps(dispatch) {

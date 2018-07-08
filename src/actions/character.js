@@ -22,10 +22,17 @@ export let ActionTypes = {
     SET_ENEMIES: 'SET_ENEMIES',
     SET_HOMEWORLD: 'SET_HOMEWORLD',
 
+    EDIT_HOMEWORLD_CHOICES: 'EDIT_HOMEWORLD_CHOICES',
+    CLOSE_HOMEWORLD_CHOICES: 'CLOSE_HOMEWORLD_CHOICES',
+
     // Stats and stuff
     ROLL_CHARACTERISTICS: 'ROLL_CHARACTERISTICS',
     ROLL_CHARACTERISTIC: 'ROLL_CHARACTERISTIC',
     SET_CHARACTERISTIC: 'SET_CHARACTERISTIC',
+    SET_BASE_CHARACTERISTIC: 'SET_BASE_CHARACTERISTIC',
+
+    // Bonuse choices
+    RESOLVE_CHOICE: 'RESOLVE_CHOICE'
 };
 
 export function rollCharacteristics(dispatch) {
@@ -36,12 +43,20 @@ export function rollCharacteristics(dispatch) {
 
 export function rollCharacteristic(dispatch, id) {
     let value = dice.roll(characteristics[id].base).total;
-    dispatch(setCharacteristic(id, value));
+    dispatch(setBaseCharacteristic(id, value));
 }
 
 export function setCharacteristic(id, value) {
     return {
         type: ActionTypes.SET_CHARACTERISTIC,
+        id,
+        value
+    };
+}
+
+export function setBaseCharacteristic(id, value) {
+    return {
+        type: ActionTypes.SET_BASE_CHARACTERISTIC,
         id,
         value
     };
@@ -61,6 +76,13 @@ export function setPlayerName(value) {
     };
 }
 
+export function setHomeworld(value) {
+    return {
+        type: ActionTypes.SET_HOMEWORLD,
+        value
+    };
+}
+
 export function setEliteAdvances(value) {
     return {
         type: ActionTypes.SET_ELITE_ADVANCES,
@@ -70,7 +92,7 @@ export function setEliteAdvances(value) {
 
 
 export function setGender(value) {
-    return {
+return {
         type: ActionTypes.SET_GENDER,
         value
     };
@@ -144,6 +166,26 @@ export function setEnemies(value) {
     return {
         type: ActionTypes.SET_ENEMIES,
         value
+    };
+}
+
+export function editHomeworldChoices() {
+    return {
+        type: ActionTypes.EDIT_HOMEWORLD_CHOICES
+    };
+}
+
+export function closeHomeworldChoices() {
+    return {
+        type: ActionTypes.CLOSE_HOMEWORLD_CHOICES
+    };
+}
+
+export function chooseBonus(choiceId, optionId) {
+    return {
+        type: ActionTypes.RESOLVE_CHOICE,
+        choiceId,
+        optionId
     };
 }
 

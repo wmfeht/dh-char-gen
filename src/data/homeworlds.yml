@@ -38,9 +38,9 @@
       blessing: 8
     - or:
       - type: talent
-        id: Technical Knock
+        id: technical knock
       - type: talent
-        id: Weapon-Tech
+        id: weapon-tech
     - type: aptitude
       id: intelligence
     - type: wounds
@@ -56,7 +56,7 @@
     - type: characteristic
       id: influence
       mod: 5
-    - type: characteristic 
+    - type: characteristic
       id: toughness
       mod: -5
     - type: fate
@@ -77,7 +77,7 @@
     - type: characteristic
       id: perception
       mod: 5
-    - type: characteristic 
+    - type: characteristic
       id: willpower
       mod: -5
     - type: fate
@@ -98,7 +98,7 @@
     - type: characteristic
       id: willpower
       mod: 5
-    - type: characteristic 
+    - type: characteristic
       id: perception
       mod: -5
     - type: fate
@@ -118,7 +118,7 @@
     - type: characteristic
       id: willpower
       mod: 5
-    - type: characteristic 
+    - type: characteristic
       id: strength
       mod: -5
     - type: fate

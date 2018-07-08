@@ -1,0 +1,7 @@
+.stat_display .buffed input {
+    background-color: lightgreen !important;
+}
+
+.stat_display .debuffed input {
+    background-color: lightcoral !important;
+}

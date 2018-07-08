@@ -7,6 +7,7 @@ import {homeworlds, backgrounds, roles} from '../../../data';
 import {
     setName,
     setPlayerName,
+    setHomeworld,
     setEliteAdvances,
     setGender,
     setAge,
@@ -19,7 +20,10 @@ import {
     setAllies,
     setEnemies,
     setNotes,
+    editHomeworldChoices,
+    closeHomeworldChoices
 } from '../../../actions/character';
+import BonusSelection from "../bonusSelection";
 import './details.css';
 
 const nullSelection = {
@@ -54,6 +58,10 @@ roleOptions.unshift(nullSelection);
 class Details extends Component {
     handleChangeName(e) {
         this.props.setName(e.target.value);
+    }
+
+    handleChangeHomeWorld(e, {value}) {
+        this.props.setHomeworld(value);
     }
 
     handleChangePlayerName(e) {
@@ -104,11 +112,21 @@ class Details extends Component {
         this.props.setEnemies(e.target.value);
     }
 
+    handleEditHomeworldChoices() {
+        this.props.editHomeworldChoices();
+    }
+
     render() {
         const props = this.props;
 
         return (
             <Form className='char_details'>
+                <BonusSelection
+                    isOpen={props.homeworldChoicesOpen}
+                    close={props.closeHomeworldChoices}
+                    headerContent='Edit Homeworld Options'
+                    choiceSource='HOMEWORLD'
+                />
                 <Header as='h4' attached='top'>Character Details</Header>
                 <Segment>
                     <Grid divided='vertically'>
@@ -118,8 +136,8 @@ class Details extends Component {
                                 <Form.Input label='Player Name:' inline value={props.playerName} onChange={_.bind(this.handleChangePlayerName, this)} />
                                 <Form.Field inline>
                                     <label>Homeworld:</label>
-                                    <Dropdown options={homeworldOptions} style={{width: '63%'}} placeholder='Select Homeworld' />
-                                    <Popup trigger={<Button size='small' icon='pencil' />} content='Edit homeworld options' position='top center' />
+                                    <Dropdown options={homeworldOptions} style={{width: '63%'}} placeholder='Select Homeworld' onChange={_.bind(this.handleChangeHomeWorld, this)} />
+                                    <Popup trigger={<Button size='small' icon='pencil' onClick={_.bind(this.handleEditHomeworldChoices, this)} />} content='Edit homeworld options' position='top center' />
                                 </Form.Field>
                                 <Form.Field inline>
                                     <label>Background:</label>
@@ -207,17 +225,22 @@ Details.propTypes = {
     setEnemies: PropTypes.func,
 
     notes: PropTypes.string,
-    setNotes: PropTypes.func
+    setNotes: PropTypes.func,
+
+    editHomeworldChoices: PropTypes.func,
+    closeHomeworldChoices: PropTypes.func,
+    homeworldChoicesOpen: PropTypes.bool,
 };
 
 function mapStateToProps(state) {
-    return _.pick(state.character, ['name', 'playerName', 'eliteAdvances', 'gender', 'age', 'build', 'complexion', 'hair', 'quirks', 'superstitions', 'mementos', 'allies', 'enemies', 'notes']);
+    return _.pick(state.character, ['name', 'playerName', 'eliteAdvances', 'gender', 'age', 'build', 'complexion', 'hair', 'quirks', 'superstitions', 'mementos', 'allies', 'enemies', 'notes', 'homeworldChoicesOpen']);
 }
 
 function mapDispatchToProps(dispatch) {
     return {
         setName: (value) => dispatch(setName(value)),
         setPlayerName: (value) => dispatch(setPlayerName(value)),
+        setHomeworld: (value) => dispatch(setHomeworld(value)),
         setEliteAdvances: (value) => dispatch(setEliteAdvances(value)),
         setGender: (value) => dispatch(setGender(value)),
         setAge: (value) => dispatch(setAge(value)),
@@ -229,7 +252,9 @@ function mapDispatchToProps(dispatch) {
         setMementos: (value) => dispatch(setMementos(value)),
         setAllies: (value) => dispatch(setAllies(value)),
         setEnemies: (value) => dispatch(setEnemies(value)),
-        setNotes: (value) => dispatch(setNotes(value))
+        setNotes: (value) => dispatch(setNotes(value)),
+        editHomeworldChoices: () => dispatch(editHomeworldChoices()),
+        closeHomeworldChoices: () => dispatch(closeHomeworldChoices())
     };
 }
 
